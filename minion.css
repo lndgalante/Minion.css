@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(1vw + 1vh + 0.5vmin);
+  --font-size: calc(24px + 0.25vw);
   --grey-1: #fafafa;
   --grey-2: #eaeaea;
   --grey-3: #999999;
@@ -24,6 +24,7 @@
 html {
   line-height: 1.15;
   word-break: break-word;
+  scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -31,8 +32,7 @@ html {
 
 body {
   min-height: 100%;
-  font-size: 1rem/1.6;
-  scroll-behavior: smooth;
+  font-size: var(--font-size);
   overscroll-behavior: contain;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -60,6 +60,12 @@ img {
   max-width: 100%;
 }
 
+a,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
 [hidden] {
   display: none;
 }
@@ -67,6 +73,12 @@ img {
 [disabled] {
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 996px;
 }
 
 .grid {
